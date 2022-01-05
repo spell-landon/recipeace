@@ -18,10 +18,15 @@
   flex-direction: column;
   margin: auto 0;
   margin-right: 15vw;
+  padding: 0;
   font-size: 18px;
   width: 500px;
   max-width: 700px;
   height: fit-content;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 10px;
+  transition: all 0.5s ease;
 }
 .text_container h1 {
   font-family: 'Rosarivo', serif;
