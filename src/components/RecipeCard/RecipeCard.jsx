@@ -7,22 +7,23 @@ function RecipeCard({ recipe }) {
   useEffect(() => {
     if (!recipe) {
       return <p className={styles.loading}>Try searching for something!</p>;
+    } else {
+        return recipe;
     }
   }, []);
+
   function openRecipe() {
     setIsOpen(!isOpen);
   }
-  function isPicture() {
-    if (!recipe.recipe.images.SMALL.url) {
-      return <span className={styles.imageTxt}>image</span>;
-    } else {
-      return recipe.recipe.label;
-    }
-  }
+
   return (
     <div className={isOpen ? styles.cardContainerActive : styles.cardContainer}>
       <div className={styles.cardContent}>
-        <img src={recipe.recipe.images.SMALL.url} alt={isPicture()} className={styles.foodImg}/>
+        <img
+          src={recipe.recipe.images.SMALL.url}
+          alt={recipe.recipe.label}
+          className={styles.foodImg}
+        />
         <section className={styles.textArea}>
           <h1>{recipe.recipe.label}</h1>
           <p>

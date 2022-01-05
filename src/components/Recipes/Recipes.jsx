@@ -37,9 +37,8 @@ function Recipes({
     return setData([]);
   }, []);
   if (data.length === 0) {
-    return null;
+    return <p>Loading...</p>;
   }
-  console.log(data.hits);
   return (
     <main className={styles.recipes_container}>
       <img src={fruit} alt='fruit' />

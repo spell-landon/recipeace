@@ -36,17 +36,17 @@
 }
 .randomBtn {
   margin-left: auto;
-  background-color: #dae1fa;
+  background-color: rgba( 184, 195, 212, 100%);
   border: none;
-  color: #4b4b4b;
+  color: #2d2d2d;
   padding: 0.5rem 0.5rem;
   border-radius: 5px;
   box-shadow: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 .randomBtn:hover {
-  background-color: #d1dbff;
+  background-color: rgb(166, 192, 233);
 }
 .randomBtn:active {
   box-shadow: inset 0 2px 4px 0 rgba(49, 49, 49, 0.2);
