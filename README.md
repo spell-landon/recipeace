@@ -39,7 +39,7 @@ To install this repository:
 
 > Home page when loaded
 
-<img src="./src/assets/wireframe-imgs/homerecipeace.jpg" alt="Home Page" width="500px">
+<img src="./src/assets/wireframe-imgs/homerecipeace.jpg" alt="Home Page" width="600px">
 
 > Recipe Page (Random)
 

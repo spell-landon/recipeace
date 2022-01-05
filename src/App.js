@@ -7,11 +7,16 @@ import About from './components/About/About';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
+  const searchOptions = {
+    apiKey: process.env.REACT_APP_EDAMAM_KEY,
+    apiId: process.env.REACT_APP_EDAMAM_ID,
+  };
+
   return (
     <div>
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route index path='/' element={<Home />} />
         <Route path='/recipes' element={<Recipes />} />
         <Route path='/about' element={<About />} />
       </Routes>
