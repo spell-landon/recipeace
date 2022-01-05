@@ -1,5 +1,5 @@
 .header {
-  background-color: #c8d3c9;
+  background-color: rgba(200, 211, 201, 0.97);
   height: 60px;
   display: flex;
   align-items: center;
@@ -7,6 +7,8 @@
   position: fixed;
   width: 100vw;
   z-index: 10;
+  backdrop-filter: blur(3px);
+
 }
 .header nav {
   display: flex;
@@ -49,4 +51,7 @@
 .header ul li:hover {
   background-color: #5777ea;
   color: #f1f1f1;
+}
+.header ul li:active {
+    background-color: #6383f7;
 }
