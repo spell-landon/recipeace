@@ -48,6 +48,7 @@ function Recipes({
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           searchString={searchString}
+          getRandom={getRandom}
         />
         <h1>Recipes</h1>
         <p className={styles.description}>
