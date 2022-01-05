@@ -5,11 +5,22 @@
   margin: 1rem 0;
   background-color: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-  /* width: 90%; */
   width: 800px;
   height: 230px;
   border-radius: 10px;
-  /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.2s ease;
+}
+.cardContainerActive {
+  margin: 1rem 0;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  width: 800px;
+  height: 830px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,7 +35,17 @@
   height: fit-content;
   padding: 1rem;
 }
-.cardContainer img {
+.cardContent .foodImg {
+  top: 0px;
+  position: relative;
+  display: inline-block;
+  max-height: 130px;
+  max-width: 130px;
+  z-index: 1;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+.imageTxt {
   top: 0px;
   position: relative;
   display: inline-block;
@@ -33,6 +54,7 @@
   z-index: 2;
   border-radius: 5px;
   margin-right: 1rem;
+  color: rgb(185, 185, 185);
 }
 .textArea h1 {
   font-weight: 100;
@@ -56,7 +78,4 @@
 .showML:hover {
   color: #616161;
   background-color: rgb(255, 250, 250);
-}
-.active {
-  height: 830px;
 }

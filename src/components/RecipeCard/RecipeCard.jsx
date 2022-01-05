@@ -11,17 +11,18 @@ function RecipeCard({ recipe }) {
   }, []);
   function openRecipe() {
     setIsOpen(!isOpen);
-    console.log(`You've opened a recipe!`);
+  }
+  function isPicture() {
+    if (!recipe.recipe.images.SMALL.url) {
+      return <span className={styles.imageTxt}>image</span>;
+    } else {
+      return recipe.recipe.label;
+    }
   }
   return (
-    <div
-      className={
-        isOpen
-          ? styles.active
-          : styles.cardContainer
-      }>
+    <div className={isOpen ? styles.cardContainerActive : styles.cardContainer}>
       <div className={styles.cardContent}>
-        <img src={recipe.recipe.images.SMALL.url} alt={recipe.recipe.label} />
+        <img src={recipe.recipe.images.SMALL.url} alt={isPicture()} className={styles.foodImg}/>
         <section className={styles.textArea}>
           <h1>{recipe.recipe.label}</h1>
           <p>
@@ -32,7 +33,7 @@ function RecipeCard({ recipe }) {
         </section>
       </div>
       <div className={styles.showML} onClick={openRecipe}>
-        Show More
+        {isOpen ? `Show Less` : `Show More`}
       </div>
     </div>
   );
