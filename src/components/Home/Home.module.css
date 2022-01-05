@@ -48,6 +48,11 @@
   font-size: 14px;
   color: rgb(190, 190, 190);
 }
+.submitBtn {
+    border: none;
+  color: transparent;
+  background-color: transparent;
+}
 @media (min-width: 1500px) {
   .textContainer {
     margin-right: 25vw;

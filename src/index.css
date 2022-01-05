@@ -4,8 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* overflow-wrap:normal; */
   height: 100%;
   font-family: 'Poppins', sans-serif;
   /* font-family: 'Rosarivo', serif; */

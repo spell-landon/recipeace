@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   font-family: 'Poppins', sans-serif;
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
 }
 .header nav {
   display: flex;
@@ -20,6 +23,7 @@
 }
 .header h1 {
   font-family: 'Rosarivo', serif;
+  font-weight: 100;
   font-size: 24px;
   letter-spacing: 4px;
   cursor: pointer;

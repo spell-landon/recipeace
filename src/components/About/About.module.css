@@ -25,6 +25,7 @@
 }
 .text_container h1 {
   font-family: 'Rosarivo', serif;
+  font-weight: 100;
   font-size: 48px;
 }
 .text_container p {
