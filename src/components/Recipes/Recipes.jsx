@@ -16,22 +16,22 @@ function Recipes({
   setLastSearch,
   searchOptions,
 }) {
-    function getRandom() {
-      let url = `https://api.edamam.com/api/recipes/v2?type=public&q=all&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}&random=true`;
-      fetch(url)
-        .then((res) => res.json())
-        .then((res) => {
-          setData(res);
-          setLastSearch(searchString);
-          setSearchString('');
-        })
-        .catch((err) => {
-          console.error(err);
-        })
-        .finally(() => {
-          return;
-        });
-    }
+  function getRandom() {
+    let url = `https://api.edamam.com/api/recipes/v2?type=public&q=all&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}&random=true`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res);
+        setLastSearch(searchString);
+        setSearchString('');
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+      .finally(() => {
+        return;
+      });
+  }
   useEffect(() => {
     getRandom();
     return setData([]);
