@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Recipeace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+My app is called Recipeace. It's a single page application that lets hungry users find recipes on anything they are looking for. Users can search for any food item and find detailed recipes on what ingredients are required and cooking instructions.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- React
+- React-Router-Dom
+- JavaScript
+- CSS, flexbox, css:selectors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation Instructions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To install this repository:
 
-### `npm test`
+- If you would like to fork the repository so you have your own copy, feel free to!
+- Click on the green "Code" button.
+- Copy either the HTTPS or SSH link that is provided (SSH is preferred)
+- Open up the Terminal and navigate to the desired directory location
+- Once inside, use the code "`git clone` copied_link_here"
+- Once the repo has been installed, change into the directory with `cd recipeace`
+- From here you can run `code .` to open it up in VS Code
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Planning Process
 
-### `npm run build`
+### User Stories
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### MVP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As a cook, I want to be able to search for recipes, so that I can find something to cook.
+- As a cook, I want to be able to see details about the recipe, so that I can learn about what I'm cooking.
+- As a cook, I want to be able to see the ingredients, so I know what goes into the recipe when cooking.
+- As a cook, I want to be able to see the steps of the recipes, so I know which order to complete the meal.
+- As a user, I want to have a picture of each recipe, so I can see the photo before deciding if I want to cook the meal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Wireframes
 
-### `npm run eject`
+> Home page when loaded
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img src="./src/assets/wireframe-imgs/homerecipeace.jpg" alt="Home Page" width="500px">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Recipe Page (Random)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src="./src/assets/wireframe-imgs/recipe_search_randomrecipeace.jpg" alt="Random Recipe Page" width="600px">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Recipe Page (Closed)
 
-## Learn More
+<img src="./src/assets/wireframe-imgs/recipe_search_closerecipeace.jpg" alt="Random Recipe Page" width="600px">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Recipe Page (Open)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img src="./src/assets/wireframe-imgs/recipe_search_openrecipeace.jpg" alt="Random Recipe Page" width="600px">
 
-### Code Splitting
+> About Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img src="./src/assets/wireframe-imgs/aboutrecipeace.jpg" alt="Random Recipe Page" width="600px">
 
-### Analyzing the Bundle Size
+#### Bronze
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- As a user, I would like to have a random recipe, so if I don't know what to cook, I can have a random option to choose from.
 
-### Making a Progressive Web App
+#### Silver
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Gold
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Major Hurdles / Unsolved Problems
