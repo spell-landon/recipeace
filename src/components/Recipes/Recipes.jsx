@@ -16,7 +16,6 @@ function Recipes({
   setLastSearch,
   searchOptions,
 }) {
-  useEffect(() => {
     function getRandom() {
       let url = `https://api.edamam.com/api/recipes/v2?type=public&q=all&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}&random=true`;
       fetch(url)
@@ -33,6 +32,7 @@ function Recipes({
           return;
         });
     }
+  useEffect(() => {
     getRandom();
     return setData([]);
   }, []);

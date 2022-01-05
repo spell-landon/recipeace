@@ -2,10 +2,10 @@
   height: calc(100vh - 60px);
   display: flex;
   justify-content: right;
-  /* align-items: center; */
   font-family: 'Poppins', sans-serif;
 }
 .about_container img {
+  top: 60px;
   position: absolute;
   width: 100%;
   height: calc(100vh - 60px);

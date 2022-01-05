@@ -25,6 +25,7 @@
   padding: 1rem;
 }
 .cardContainer img {
+  top: 0px;
   position: relative;
   display: inline-block;
   height: 130px;
@@ -32,8 +33,6 @@
   z-index: 2;
   border-radius: 5px;
   margin-right: 1rem;
-}
-.textArea {
 }
 .textArea h1 {
   font-weight: 100;
