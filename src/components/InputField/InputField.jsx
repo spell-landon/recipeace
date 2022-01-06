@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './InputField.module.css';
+import moment from 'moment';
 
-function InputField({ handleSubmit, handleChange, searchString, getRandom}) {
+function InputField({ handleSubmit, handleChange, searchString, getRandom }) {
+
   return (
     <div className={styles.inputContainer}>
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -17,7 +19,9 @@ function InputField({ handleSubmit, handleChange, searchString, getRandom}) {
         />
         <input type='submit' value='' className={styles.submit_btn} />
       </form>
-      <button onClick={getRandom} className={styles.randomBtn}>Randomize</button>
+      <button onClick={getRandom} className={styles.randomBtn}>
+        Randomize
+      </button>
     </div>
   );
 }

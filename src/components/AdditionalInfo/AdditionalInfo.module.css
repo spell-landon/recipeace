@@ -1,0 +1,58 @@
+/* Additional Info */
+.additionalInfo {
+  padding: 0 1rem;
+  margin: 1rem auto;
+  max-height: 100%;
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+.upper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e4e4e4;
+}
+.lower {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.lower h3 {
+  padding-bottom: 0.2rem;
+}
+.additionalInfo .title {
+  font-family: 'Rosarivo', serif;
+  font-weight: 100;
+  font-size: 16px;
+}
+.additionalInfo .title span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}
+.ingredients {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 1rem;
+}
+.ingredients,
+.healthLabels {
+  text-align: left;
+}
+.ingredients ul,
+.healthLabels ul {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+  height: fit-content;
+  max-height: 200px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.ingredients li,
+.healthLabels li {
+  font-size: 12px;
+}
