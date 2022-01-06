@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react/cjs/react.development';
 import styles from './RecipeCard.module.css';
+import AdditionalInfo from '../AdditionalInfo/AdditionalInfo';
 
 function RecipeCard({ recipe }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,21 +12,38 @@ function RecipeCard({ recipe }) {
       return recipe;
     }
   }, []);
+  useEffect(() => {
+    setIsOpen(false);
+  }, []);
 
   function openRecipe() {
     setIsOpen(!isOpen);
   }
-
+  function picAvailable() {
+    if (recipe.recipe.images.SMALL?.url) {
+      return recipe.recipe.images.SMALL.url;
+    } else if (!recipe.recipe.images.SMALL) {
+      return recipe.recipe.images.THUMBNAIL.url;
+    } else if (!recipe.recipe.images.SMALL && !recipe.recipe.images.THUMBNAIL) {
+      return recipe.recipe.image;
+    } else {
+      return null;
+    }
+  }
   return (
     <div className={isOpen ? styles.cardContainerActive : styles.cardContainer}>
       <div className={styles.cardContent}>
         <img
-          src={recipe.recipe.images.SMALL.url}
+          src={picAvailable()}
           alt={recipe.recipe.label}
           className={styles.foodImg}
         />
         <section className={styles.textArea}>
-          <h1>{recipe.recipe.label}</h1>
+          <h1>
+            <a target='_blank' href={recipe.recipe.url} rel='noreferrer'>
+              {recipe.recipe.label}
+            </a>
+          </h1>
           <section className={styles.quickInfo}>
             <div>
               <h2>
@@ -45,26 +63,7 @@ function RecipeCard({ recipe }) {
           </section>
         </section>
       </div>
-      {isOpen ? (
-        <section className={styles.additionalInfo}>
-          <div className={styles.first}>
-            <h3>Ingredients</h3>
-            <ul>
-              {recipe.recipe.ingredients.map((ingredient, index) => (
-                <li key={index}>{ingredient.text}</li>
-              ))}
-            </ul>
-          </div>
-          <div className={styles.second}>
-            <h3>Cooking Instructions</h3>
-          </div>
-          <div className={styles.third}>
-            <h3>Settings</h3>
-          </div>
-        </section>
-      ) : (
-        ''
-      )}
+      {isOpen ? <AdditionalInfo recipe={recipe} /> : ''}
       <div className={styles.showML} onClick={openRecipe}>
         {isOpen ? `Show Less` : `Show More`}
       </div>

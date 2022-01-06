@@ -4,7 +4,7 @@ import Home from './components/Home/Home';
 import Recipes from './components/Recipes/Recipes';
 import About from './components/About/About';
 // dependencies
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
   const [data, setData] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
+  const navigate = useNavigate();
   function getRecipes() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchString}&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}`;
     fetch(url)
@@ -40,6 +41,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     getRecipes(searchString);
+    navigate(`/recipes/${searchString}`);
   }
   function handleChange(e) {
     setSearchString(e.target.value);
@@ -64,6 +66,22 @@ function App() {
         />
         <Route
           path='/recipes'
+          element={
+            <Recipes
+              data={data}
+              setData={setData}
+              searchString={searchString}
+              setSearchString={setSearchString}
+              lastSearch={lastSearch}
+              setLastSearch={setLastSearch}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              searchOptions={searchOptions}
+            />
+          }
+        />
+        <Route
+          path='/recipes/:search'
           element={
             <Recipes
               data={data}
