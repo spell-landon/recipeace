@@ -13,10 +13,10 @@ function Recipes({
   handleSubmit,
   searchString,
   setSearchString,
-  lastSearch,
   setLastSearch,
   searchOptions,
 }) {
+
   const { search } = useParams(searchString);
 
   function randomSearch() {
@@ -35,6 +35,7 @@ function Recipes({
     let item = options[Math.floor(Math.random() * options.length)];
     return item;
   }
+
   function getRandom() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${randomSearch()}&app_id=${
       searchOptions.apiId
@@ -53,16 +54,19 @@ function Recipes({
         return;
       });
   }
+
   useEffect(() => {
     getRandom();
     return setData([]);
   }, []);
+
   if (data.length === 0) {
     return <p>Loading...</p>;
   }
+
   return (
     <main className={styles.recipes_container}>
-      <img src={fruit} alt='fruit' />
+      <img src={fruit} alt='fruit' className={styles.background} />
       <section className={styles.recipes_page}>
         <InputField
           handleChange={handleChange}
@@ -77,7 +81,7 @@ function Recipes({
         </h1>
         <p className={styles.description}>
           Check out some random categorized recipes to find something new!
-          <br></br>Or, try searching something specific in the search bar above.
+          <br></br>Or, try searching something specific in the bar above.
         </p>
         <ul>
           {data.hits.map((recipe, index) => (

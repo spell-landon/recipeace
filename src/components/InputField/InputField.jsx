@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './InputField.module.css';
-import moment from 'moment';
+
 
 function InputField({ handleSubmit, handleChange, searchString, getRandom }) {
-
   return (
     <div className={styles.inputContainer}>
       <form onSubmit={handleSubmit} className={styles.form}>

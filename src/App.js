@@ -20,14 +20,25 @@ function App() {
   const [data, setData] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
+
+  // For URL navigation
   const navigate = useNavigate();
+
+  // For onmount animation
+  // Helper
+  // https://czaplinski.io/blog/super-easy-animation-with-react-hooks/
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    setShow(!show);
+    return setShow(!show);
+  }, []);
+
   function getRecipes() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchString}&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}`;
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
         setData(res);
-        console.log(data);
         setLastSearch(searchString);
         setSearchString('');
       })
@@ -41,6 +52,7 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     getRecipes(searchString);
+    // For URL navigation
     navigate(`/recipes/${searchString}`);
   }
   function handleChange(e) {
@@ -48,7 +60,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='main-area'>
       <Header />
       <Routes>
         <Route
@@ -61,6 +73,7 @@ function App() {
               handleSubmit={handleSubmit}
               handleChange={handleChange}
               searchString={searchString}
+              show={show}
             />
           }
         />
@@ -96,7 +109,6 @@ function App() {
             />
           }
         />
-
         <Route path='/about' element={<About />} />
       </Routes>
     </div>

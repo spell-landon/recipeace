@@ -5,6 +5,7 @@ import AdditionalInfo from '../AdditionalInfo/AdditionalInfo';
 
 function RecipeCard({ recipe }) {
   const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     if (!recipe) {
       return <p className={styles.loading}>Try searching for something!</p>;
@@ -12,6 +13,7 @@ function RecipeCard({ recipe }) {
       return recipe;
     }
   }, []);
+
   useEffect(() => {
     setIsOpen(false);
   }, []);
@@ -19,7 +21,9 @@ function RecipeCard({ recipe }) {
   function openRecipe() {
     setIsOpen(!isOpen);
   }
+
   function picAvailable() {
+    //   THUMBNAIL, SMALL, REGULAR, LARGE
     if (recipe.recipe.images.SMALL?.url) {
       return recipe.recipe.images.SMALL.url;
     } else if (!recipe.recipe.images.SMALL) {
@@ -30,6 +34,7 @@ function RecipeCard({ recipe }) {
       return null;
     }
   }
+
   return (
     <div className={isOpen ? styles.cardContainerActive : styles.cardContainer}>
       <div className={styles.cardContent}>
@@ -38,9 +43,14 @@ function RecipeCard({ recipe }) {
           alt={recipe.recipe.label}
           className={styles.foodImg}
         />
+
         <section className={styles.textArea}>
           <h1>
-            <a target='_blank' href={recipe.recipe.url} rel='noreferrer'>
+            <a
+              target='_blank'
+              href={recipe.recipe.url}
+              rel='noreferrer'
+              className={styles.recipeLink}>
               {recipe.recipe.label}
             </a>
           </h1>
