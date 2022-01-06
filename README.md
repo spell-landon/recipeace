@@ -10,6 +10,7 @@ My app is called Recipeace. It's a single page application that lets hungry user
 - React-Router-Dom
 - JavaScript
 - CSS, flexbox, css:selectors
+- HTML
 
 ## Installation Instructions
 

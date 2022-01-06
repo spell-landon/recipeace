@@ -17,7 +17,7 @@ function Recipes({
   searchOptions,
 }) {
   function getRandom() {
-    let url = `https://api.edamam.com/api/recipes/v2?type=public&q=all&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}&random=true`;
+    let url = `https://api.edamam.com/api/recipes/v2?type=public&q=vegan&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}&random=true`;
     fetch(url)
       .then((res) => res.json())
       .then((res) => {

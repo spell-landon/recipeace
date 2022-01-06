@@ -12,27 +12,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  transition: height 0.2s ease;
+  transition: all 0.5s ease;
 }
 .cardContainerActive {
   margin: 1rem 0;
   background-color: white;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-  width: 800px;
-  height: 830px;
+  width: 90vw;
+  /* height: 830px; */
+  height: 75vh;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  transition: height 0.2s ease;
+  transition: all 0.5s ease;
 }
 .cardContent {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   z-index: 1;
   height: fit-content;
+  width: 100%;
   padding: 1rem;
 }
 .cardContent .foodImg {
@@ -45,14 +47,32 @@
   border-radius: 5px;
   margin-right: 1rem;
 }
-
+.textArea section {
+  display: flex;
+}
+.quickInfo {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 420px;
+  height: 68%;
+}
+.quickInfo div {
+  margin-right: 1rem;
+}
+.quickInfo div h2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.quickInfo div span {
+  font-weight: 300;
+  font-size: 14px;
+}
 .textArea h1 {
   font-weight: 100;
   font-size: 18px;
   margin-bottom: 1rem;
-}
-.textArea p {
-  font-size: 16px;
 }
 .showML {
   border-top: 1px solid #e4e4e4;
@@ -68,4 +88,39 @@
 .showML:hover {
   color: #616161;
   background-color: rgb(255, 250, 250);
+}
+/* Additional Info */
+.additionalInfo {
+  padding: 0 1rem;
+  margin: 1rem auto;
+  /* border: 1px solid red; */
+  max-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+.additionalInfo div {
+  overflow-y: scroll;
+}
+.additionalInfo div h3 {
+  font-family: 'Rosarivo', serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+.additionalInfo .first ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px;
+}
+.additionalInfo .first h3 {
+  text-align: start;
+}
+.additionalInfo .second h3 {
+  text-align: center;
+}
+.additionalInfo .third h3 {
+  text-align: end;
 }
