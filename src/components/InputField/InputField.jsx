@@ -22,7 +22,8 @@ function InputField({ handleSubmit, handleChange, searchString, getRandom }) {
       </form>
       <Link to='/random'>
         <button onClick={getRandom} className={styles.randomBtn}>
-          Randomize
+          {/* Randomize */}
+          <i class='fas fa-random'></i>
         </button>
       </Link>
     </div>
