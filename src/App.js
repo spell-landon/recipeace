@@ -24,18 +24,6 @@ function App() {
   // For URL navigation
   const navigate = useNavigate();
 
-  // For onmount animation
-  // Helper
-  // https://czaplinski.io/blog/super-easy-animation-with-react-hooks/
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    setShow(!show);
-    return setShow(!show);
-  }, []);
-  useEffect(() => {
-
-  },[])
-
   function getRecipes() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchString}&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}`;
     fetch(url)
@@ -61,63 +49,66 @@ function App() {
   }
   function handleChange(e) {
     setSearchString(e.target.value);
-    setLastSearch(e.target.value)
+    setLastSearch(e.target.value);
   }
 
   return (
-    <div className='main-area'>
+    <>
       <Header />
-      <Routes>
-        <Route
-          index
-          path='/'
-          element={
-            <Home
-              data={data}
-              setData={setData}
-              handleSubmit={handleSubmit}
-              handleChange={handleChange}
-              searchString={searchString}
-              show={show}
-              lastSearch={lastSearch}
-            />
-          }
-        />
-        <Route
-          path='/recipes/'
-          element={
-            <Recipes
-              data={data}
-              setData={setData}
-              searchString={searchString}
-              setSearchString={setSearchString}
-              lastSearch={lastSearch}
-              setLastSearch={setLastSearch}
-              handleChange={handleChange}
-              handleSubmit={handleSubmit}
-              searchOptions={searchOptions}
-            />
-          }
-        />
-        <Route
-          path='/recipes/:search'
-          element={
-            <Recipes
-              data={data}
-              setData={setData}
-              searchString={searchString}
-              setSearchString={setSearchString}
-              lastSearch={lastSearch}
-              setLastSearch={setLastSearch}
-              handleChange={handleChange}
-              handleSubmit={handleSubmit}
-              searchOptions={searchOptions}
-            />
-          }
-        />
-        <Route path='/about' element={<About />} />
-      </Routes>
-    </div>
+      <main>
+        <Routes>
+          <Route
+            index
+            path='/'
+            element={
+              <Home
+                data={data}
+                setData={setData}
+                handleSubmit={handleSubmit}
+                handleChange={handleChange}
+                searchString={searchString}
+                setSearchString={setSearchString}
+                lastSearch={lastSearch}
+              />
+            }
+          />
+          <Route
+            path='/recipes/'
+            element={
+              <Recipes
+                data={data}
+                setData={setData}
+                searchString={searchString}
+                setSearchString={setSearchString}
+                lastSearch={lastSearch}
+                setLastSearch={setLastSearch}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                searchOptions={searchOptions}
+              />
+            }
+          />
+          <Route
+            path='/recipes/:search'
+            element={
+              <Recipes
+                data={data}
+                setData={setData}
+                searchString={searchString}
+                setSearchString={setSearchString}
+                lastSearch={lastSearch}
+                setLastSearch={setLastSearch}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                searchOptions={searchOptions}
+                getRecipes={getRecipes}
+              />
+            }
+          />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </main>
+    </>
   );
 }
 

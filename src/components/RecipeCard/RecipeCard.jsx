@@ -16,45 +16,41 @@ function RecipeCard({ recipe }) {
 
   useEffect(() => {
     setIsOpen(false);
+    return () => {
+      setIsOpen(false);
+    };
   }, []);
 
   function openRecipe() {
     setIsOpen(!isOpen);
   }
 
-  function picAvailable() {
-    //   THUMBNAIL, SMALL, REGULAR, LARGE
-    if (recipe.recipe.images?.SMALL)
-    if (recipe.recipe.images.SMALL?.url) {
-      return recipe.recipe.images.SMALL.url;
-    } else if (!recipe.recipe.images.SMALL) {
-      return recipe.recipe.images.THUMBNAIL.url;
-    } else if (!recipe.recipe.images.SMALL && !recipe.recipe.images.THUMBNAIL) {
-      return recipe.recipe.image;
-    } else {
-      return null;
-    }
-  }
-
   return (
     <div className={isOpen ? styles.cardContainerActive : styles.cardContainer}>
       <div className={styles.cardContent}>
-        <img
-          src={picAvailable()}
-          alt={recipe.recipe.label}
-          className={styles.foodImg}
-        />
+        {recipe.recipe.images?.SMALL?.url ? (
+          <img
+            src={recipe.recipe.images.SMALL?.url}
+            alt={recipe.recipe.label}
+            className={styles.foodImg}
+          />
+        ) : (
+          <p className={styles.foodImg}>image</p>
+        )}
 
         <section className={styles.textArea}>
-          <h1>
-            <a
-              target='_blank'
-              href={recipe.recipe.url}
-              rel='noreferrer'
-              className={styles.recipeLink}>
-              {recipe.recipe.label}
-            </a>
-          </h1>
+          <div className={styles.titleSection}>
+            <h1>{recipe.recipe.label}</h1>
+            <span>
+              <a
+                target='_blank'
+                href={recipe.recipe.url}
+                rel='noreferrer'
+                className={styles.recipeLink}>
+                View Full Recipe
+              </a>
+            </span>
+          </div>
           <section className={styles.quickInfo}>
             <div>
               <h2>

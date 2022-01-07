@@ -4,14 +4,7 @@
   justify-content: right;
   align-items: center;
   font-family: 'Poppins', sans-serif;
-}
-.home_container img {
-  position: absolute;
-  width: 100%;
-  height: calc(100vh - 60px);
-  object-fit: cover;
-  z-index: -1;
-  top: 60px;
+  animation: fadeIn 1.5s ease;
 }
 .textContainer {
   z-index: 1;
@@ -22,6 +15,9 @@
   font-size: 24px;
   transition: all 0.5s ease;
 }
+.textContainer form {
+  animation: fadeUp 1.5s ease;
+}
 .textContainer h2 {
   font-size: 24px;
   font-weight: 400;
@@ -30,6 +26,7 @@
 .textContainer h2 span {
   color: #5777ea;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  animation: moveShadowIn 1.5s ease;
 }
 /* Search Bar */
 .searchBar {
@@ -88,5 +85,30 @@
   }
   .searchBar::placeholder {
     text-align: left;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(1.5rem);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes moveShadowIn {
+  0% {
+    text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   }
 }

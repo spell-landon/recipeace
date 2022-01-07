@@ -67,8 +67,8 @@ function Recipes({
   }
 
   return (
-    <main className={styles.recipes_container}>
-      <img src={fruit} alt='fruit' className={styles.background} />
+    <div className={styles.recipes_container}>
+      {/* <img src={fruit} alt='fruit' className={styles.background} /> */}
       <section className={styles.recipes_page}>
         <InputField
           handleChange={handleChange}
@@ -93,7 +93,7 @@ function Recipes({
           ))}
         </ul>
       </section>
-    </main>
+    </div>
   );
 }
 
