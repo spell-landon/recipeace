@@ -7,7 +7,7 @@
 }
 .text_container {
   z-index: 1;
-  backdrop-filter: blur(80px);
+  /* backdrop-filter: blur(80px); */
   display: flex;
   flex-direction: column;
   margin: auto 0;
@@ -30,7 +30,7 @@
 .text_container p {
   font-size: 18px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .about_container {
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@
     justify-content: center;
     transition: all 0.5s ease;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(5px);
     padding: 2rem;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
