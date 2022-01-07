@@ -32,9 +32,10 @@ function Home({
             value={searchString}
             placeholder='ex: chicken, tofu, juice, smoothie'
             autoComplete='off'
+            required
           />
 
-          <input type='submit' value='' className={styles.submitBtn} />
+          <input type='submit' value='Search' className={styles.submitBtn} />
         </form>
       </div>
     </div>
