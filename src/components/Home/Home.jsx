@@ -1,13 +1,45 @@
 // dependencies
 import React from 'react';
+import { useEffect } from 'react/cjs/react.development';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { fasSearch } from '@fortawesome/free-solid-svg-icons';
 // styles
 import styles from './Home.module.css';
 
-function Home({
-  handleSubmit,
-  handleChange,
-  searchString,
-}) {
+function Home({ handleSubmit, handleChange, searchString }) {
+  // Change placeholder text
+  // https://www.titanwolf.org/Network/q/eec68783-2ff7-45e0-8dbd-d73dbd5eef6c/y
+  let options = [
+    'chicken',
+    'tofu',
+    'juice',
+    'smoothie',
+    'lemons',
+    'cookies',
+    'stroganoff',
+    'chinese',
+    'cactus',
+    'noodles',
+    'beef',
+    'ice cream',
+    'lasagna',
+    'cheese dips',
+    'sushi',
+    'steak',
+    'curry',
+    'rice',
+  ];
+  let counter = 0;
+  let placeholder = document.getElementById('searchBar');
+  function changePlaceholder() {
+    if (counter >= options.length) {
+      counter = 0;
+    }
+    placeholder.setAttribute('placeholder', options[counter]);
+    counter++;
+  }
+  setInterval(changePlaceholder, 2500);
+
   return (
     <div className={styles.home_container}>
       <div className={styles.textContainer}>
@@ -27,12 +59,14 @@ function Home({
             className={styles.searchBar}
             onChange={handleChange}
             value={searchString}
-            placeholder='ex: chicken, tofu, juice, smoothie'
+            placeholder=''
             autoComplete='off'
             required
           />
 
-          <input type='submit' value='Search' className={styles.submitBtn} />
+          <button type='submit' className={styles.submitBtn}>
+            <i class='fas fa-search'></i>
+          </button>
         </form>
       </div>
     </div>
