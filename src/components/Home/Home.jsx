@@ -59,7 +59,7 @@ function Home({ handleSubmit, handleChange, searchString }) {
             className={styles.searchBar}
             onChange={handleChange}
             value={searchString}
-            placeholder=''
+            placeholder='beef'
             autoComplete='off'
             required
           />

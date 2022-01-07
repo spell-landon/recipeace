@@ -20,6 +20,17 @@ function About(props) {
           will take you the the original recipe link which contains all other
           information, along with cooking instructions.
         </p>
+        <br></br>
+        <p>
+          If you would like to check out the GitHub repo, you can find it{' '}
+          <a
+            target='_blank'
+            href='https://github.com/spell-landon/recipeace'
+            rel='noreferrer'>
+            here
+          </a>
+          !
+        </p>
       </div>
     </div>
   );
