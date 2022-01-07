@@ -17,7 +17,6 @@ function Recipes({
   setSearchString,
   setLastSearch,
   searchOptions,
-  getRecipes,
 }) {
 
   function randomSearch() {

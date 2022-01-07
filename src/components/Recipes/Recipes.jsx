@@ -18,7 +18,6 @@ function Recipes({
   setSearchString,
   setLastSearch,
   searchOptions,
-  getRecipes,
 }) {
   const { search } = useParams(searchString);
 
