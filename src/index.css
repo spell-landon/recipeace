@@ -5,9 +5,11 @@
   box-sizing: border-box;
 }
 html {
-  background-color: rgb(248, 243, 232);
+  background-image: url(../src/assets/fruit-bg.jpg);
+  height: calc(100vh);
+  background-size: cover;
   overflow: hidden;
-  height: fit-content;
+  opacity: 1;
 }
 body {
   overflow: scroll;
@@ -18,14 +20,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-main {
-  background-image: url(../src/assets/fruit-bg.jpg);
-  height: calc(100vh);
-  background-size: cover;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+/* @media (max-width: 1100px) {
+  html {
+    background-color: rgb(248, 243, 232);
+  }
+}
+@media (min-width: 1100px) {
+  html {
+    background-image: url(../src/assets/fruit-bg.jpg);
+  }
+} */

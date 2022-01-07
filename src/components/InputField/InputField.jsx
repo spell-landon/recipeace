@@ -1,6 +1,7 @@
+// dependencies
 import React from 'react';
+// styles
 import styles from './InputField.module.css';
-
 
 function InputField({ handleSubmit, handleChange, searchString, getRandom }) {
   return (

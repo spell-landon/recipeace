@@ -1,6 +1,6 @@
 // dependencies
 import React from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // styles
 import styles from './Recipes.module.css';
@@ -62,9 +62,10 @@ function Recipes({
     return setData([]);
   }, []);
 
-  if (data.length === 0) {
-    return <p>Loading...</p>;
-  }
+    if (data.length === 0 || data.hits.length === 0) {
+      return <p className={styles.loading}>Loading...</p>;
+    } 
+
 
   return (
     <div className={styles.recipes_container}>
@@ -75,7 +76,7 @@ function Recipes({
           searchString={searchString}
           getRandom={getRandom}
         />
-        <h1>
+        <h1 className={styles.mainTitle}>
           {search
             ? search.charAt(0).toUpperCase() + search.slice(1) + ' Recipes'
             : `Random Recipes`}

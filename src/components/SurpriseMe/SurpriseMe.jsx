@@ -1,10 +1,12 @@
+// dependencies
 import React from 'react';
 import { useEffect } from 'react';
-import styles from './Recipes.module.css';
-import fruit from '../../assets/fruit-bg.jpg';
+import { useParams } from 'react-router-dom';
+// styles
+import styles from './SurpriseMe.module.css';
+// components
 import InputField from '../InputField/InputField';
 import RecipeCard from '../RecipeCard/RecipeCard';
-import { useParams } from 'react-router-dom';
 
 function Recipes({
   data,
@@ -15,6 +17,7 @@ function Recipes({
   setSearchString,
   setLastSearch,
   searchOptions,
+  getRecipes,
 }) {
   const { search } = useParams(searchString);
 
@@ -48,7 +51,6 @@ function Recipes({
       })
       .catch((err) => {
         console.error(err);
-        <p>No items were found</p>;
       })
       .finally(() => {
         return;
@@ -57,9 +59,7 @@ function Recipes({
 
   useEffect(() => {
     getRandom();
-    return () => {
-      setData([]);
-    };
+    return setData([]);
   }, []);
 
   if (data.length === 0) {
@@ -68,7 +68,6 @@ function Recipes({
 
   return (
     <div className={styles.recipes_container}>
-      {/* <img src={fruit} alt='fruit' className={styles.background} /> */}
       <section className={styles.recipes_page}>
         <InputField
           handleChange={handleChange}

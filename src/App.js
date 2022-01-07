@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Recipes from './components/Recipes/Recipes';
 import About from './components/About/About';
+import SurpriseMe from './components/SurpriseMe/SurpriseMe';
 // dependencies
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -46,6 +47,7 @@ function App() {
     // For URL navigation
     navigate(`/recipes/${searchString}`);
     setLastSearch('');
+    console.log(data);
   }
   function handleChange(e) {
     setSearchString(e.target.value);
@@ -90,6 +92,23 @@ function App() {
           />
           <Route
             path='/recipes/:search'
+            element={
+              <Recipes
+                data={data}
+                setData={setData}
+                searchString={searchString}
+                setSearchString={setSearchString}
+                lastSearch={lastSearch}
+                setLastSearch={setLastSearch}
+                handleChange={handleChange}
+                handleSubmit={handleSubmit}
+                searchOptions={searchOptions}
+                getRecipes={getRecipes}
+              />
+            }
+          />
+          <Route
+            path='/surprise-me'
             element={
               <Recipes
                 data={data}

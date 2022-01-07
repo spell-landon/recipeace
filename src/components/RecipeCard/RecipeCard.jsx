@@ -1,6 +1,9 @@
+// dependencies
 import React from 'react';
 import { useState, useEffect } from 'react';
+// styles
 import styles from './RecipeCard.module.css';
+// components
 import AdditionalInfo from '../AdditionalInfo/AdditionalInfo';
 
 function RecipeCard({ recipe }) {
@@ -35,7 +38,7 @@ function RecipeCard({ recipe }) {
             className={styles.foodImg}
           />
         ) : (
-          <p className={styles.foodImg}>image</p>
+          <p className={styles.noImg}>image</p>
         )}
 
         <section className={styles.textArea}>

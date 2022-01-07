@@ -1,4 +1,6 @@
+// dependencies
 import React from 'react';
+// styles
 import styles from './About.module.css';
 
 function About(props) {
