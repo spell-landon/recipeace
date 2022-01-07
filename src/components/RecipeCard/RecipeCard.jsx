@@ -24,6 +24,7 @@ function RecipeCard({ recipe }) {
 
   function picAvailable() {
     //   THUMBNAIL, SMALL, REGULAR, LARGE
+    if (recipe.recipe.images?.SMALL)
     if (recipe.recipe.images.SMALL?.url) {
       return recipe.recipe.images.SMALL.url;
     } else if (!recipe.recipe.images.SMALL) {

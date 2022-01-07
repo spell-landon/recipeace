@@ -9,17 +9,11 @@ function About(props) {
       <div className={styles.text_container}>
         <h1>About</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At reiciendis
-          hic minima, velit odio repellat explicabo optio iusto quis unde quos.
-          Veritatis, dolorum atque commodi iste vitae aliquam tempore enim
-          doloremque, deserunt natus accusamus provident nisi impedit quisquam
-          eveniet ipsam reprehenderit earum deleniti dolor iure consectetur.
-          Exercitationem ad labore atque.
+        Recipeace is a website that was built out of both passion for coding and an interest in cooking. This site utilizes the Edamam API to gather the recipes and display their data. 
         </p>
         <br></br>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum saepe
-          debitis quam maxime laboriosam, sunt laudantium
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sint!
         </p>
       </div>
     </main>
