@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Recipes from './components/Recipes/Recipes';
 import About from './components/About/About';
-import SurpriseMe from './components/SurpriseMe/SurpriseMe';
+import Random from './components/Random/Random';
 // dependencies
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -108,9 +108,9 @@ function App() {
             }
           />
           <Route
-            path='/surprise-me'
+            path='/random'
             element={
-              <Recipes
+              <Random
                 data={data}
                 setData={setData}
                 searchString={searchString}

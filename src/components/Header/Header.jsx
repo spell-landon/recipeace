@@ -20,7 +20,7 @@ function Header(props) {
           <Link to='/recipes'>
             <li>Recipes</li>
           </Link>
-          <Link to='/surprise-me'>
+          <Link to='/random'>
             <li>Surprise Me</li>
           </Link>
           <Link to='/about'>

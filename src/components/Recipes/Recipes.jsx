@@ -7,6 +7,7 @@ import styles from './Recipes.module.css';
 // components
 import InputField from '../InputField/InputField';
 import RecipeCard from '../RecipeCard/RecipeCard';
+import Footer from '../Footer/Footer';
 
 function Recipes({
   data,
@@ -62,10 +63,9 @@ function Recipes({
     return setData([]);
   }, []);
 
-    if (data.length === 0 || data.hits.length === 0) {
-      return <p className={styles.loading}>Loading...</p>;
-    } 
-
+  if (data.length === 0 || data.hits.length === 0) {
+    return <p className={styles.loading}>Loading...</p>;
+  }
 
   return (
     <div className={styles.recipes_container}>
@@ -79,7 +79,7 @@ function Recipes({
         <h1 className={styles.mainTitle}>
           {search
             ? search.charAt(0).toUpperCase() + search.slice(1) + ' Recipes'
-            : `Random Recipes`}
+            : `Recipes`}
         </h1>
         <p className={styles.description}>
           Check out some random categorized recipes to find something new!
@@ -93,6 +93,7 @@ function Recipes({
           ))}
         </ul>
       </section>
+      <Footer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 // dependencies
 import React from 'react';
+import { Link } from 'react-router-dom';
 // styles
 import styles from './InputField.module.css';
 
@@ -19,9 +20,11 @@ function InputField({ handleSubmit, handleChange, searchString, getRandom }) {
         />
         <input type='submit' value='' className={styles.submit_btn} />
       </form>
-      <button onClick={getRandom} className={styles.randomBtn}>
-        Randomize
-      </button>
+      <Link to='/random'>
+        <button onClick={getRandom} className={styles.randomBtn}>
+          Randomize
+        </button>
+      </Link>
     </div>
   );
 }

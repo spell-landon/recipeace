@@ -3,6 +3,7 @@ import React from 'react';
 // styles
 import styles from './About.module.css';
 
+
 function About(props) {
   return (
     <div className={styles.about_container}>
