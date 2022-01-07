@@ -1,6 +1,8 @@
+// dependencies
 import React from 'react';
-import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
+// styles
+import styles from './Header.module.css';
 
 function Header(props) {
   return (
@@ -17,6 +19,9 @@ function Header(props) {
           </Link>
           <Link to='/recipes'>
             <li>Recipes</li>
+          </Link>
+          <Link to='/random'>
+            <li>Surprise Me</li>
           </Link>
           <Link to='/about'>
             <li>About</li>

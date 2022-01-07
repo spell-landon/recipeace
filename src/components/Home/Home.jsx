@@ -1,4 +1,6 @@
+// dependencies
 import React from 'react';
+// styles
 import styles from './Home.module.css';
 
 function Home({
@@ -19,7 +21,7 @@ function Home({
           Find your Reci
           <span>peace</span>.
         </h2>
-        
+
         <form onSubmit={handleSubmit}>
           <input
             type='text'

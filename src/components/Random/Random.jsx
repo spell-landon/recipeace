@@ -1,10 +1,12 @@
+// dependencies
 import React from 'react';
-import { useEffect } from 'react';
-import styles from './Recipes.module.css';
-import fruit from '../../assets/fruit-bg.jpg';
+import { useState, useEffect } from 'react';
+// styles
+import styles from './Random.module.css'
+// components
 import InputField from '../InputField/InputField';
 import RecipeCard from '../RecipeCard/RecipeCard';
-import { useParams } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 function Recipes({
   data,
@@ -15,8 +17,8 @@ function Recipes({
   setSearchString,
   setLastSearch,
   searchOptions,
+  getRecipes,
 }) {
-  const { search } = useParams(searchString);
 
   function randomSearch() {
     let options = [
@@ -48,7 +50,6 @@ function Recipes({
       })
       .catch((err) => {
         console.error(err);
-        <p>No items were found</p>;
       })
       .finally(() => {
         return;
@@ -57,18 +58,15 @@ function Recipes({
 
   useEffect(() => {
     getRandom();
-    return () => {
-      setData([]);
-    };
+    return setData([]);
   }, []);
 
-  if (data.length === 0) {
-    return <p>Loading...</p>;
+  if (data.length === 0 || data.hits.length === 0) {
+    return <p className={styles.loading}>Loading...</p>;
   }
 
   return (
     <div className={styles.recipes_container}>
-      {/* <img src={fruit} alt='fruit' className={styles.background} /> */}
       <section className={styles.recipes_page}>
         <InputField
           handleChange={handleChange}
@@ -76,10 +74,8 @@ function Recipes({
           searchString={searchString}
           getRandom={getRandom}
         />
-        <h1>
-          {search
-            ? search.charAt(0).toUpperCase() + search.slice(1) + ' Recipes'
-            : `Random Recipes`}
+        <h1 className={styles.mainTitle}>
+          Random Recipes
         </h1>
         <p className={styles.description}>
           Check out some random categorized recipes to find something new!
@@ -93,6 +89,7 @@ function Recipes({
           ))}
         </ul>
       </section>
+      <Footer />
     </div>
   );
 }
