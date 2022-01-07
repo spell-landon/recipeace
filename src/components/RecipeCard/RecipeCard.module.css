@@ -1,5 +1,5 @@
 .loading {
-  opacity: 0;
+  opacity: 1;
 }
 .cardContainer {
   margin: 1rem 0;
@@ -48,9 +48,35 @@
   border-radius: 5px;
   margin-right: 1rem;
 }
+.textArea .titleSection h1 {
+  font-weight: 100;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+.textArea {
+  width: 100%;
+}
 .textArea section {
   display: flex;
 }
+.titleSection {
+  display: flex;
+  justify-content: space-between;
+}
+.titleSection span {
+  font-size: 12px;
+}
+/* a link tags */
+.recipeLink {
+  text-decoration: none;
+  color: rgb(145, 180, 255);
+  transition: color 0.2s ease;
+  font-size: 12px;
+}
+.recipeLink:hover {
+  color: #5777ea;
+}
+
 .quickInfo {
   display: flex;
   flex-direction: column;
@@ -69,11 +95,7 @@
   font-weight: 300;
   font-size: 14px;
 }
-.textArea h1 {
-  font-weight: 100;
-  font-size: 18px;
-  margin-bottom: 1rem;
-}
+
 .showML {
   border-top: 1px solid #e4e4e4;
   font-size: 14px;
@@ -88,14 +110,4 @@
 .showML:hover {
   color: #616161;
   background-color: rgb(255, 250, 250);
-}
-/* a link tags */
-.recipeLink {
-  text-decoration: none;
-  color: black;
-  transition: color 0.2s ease;
-  font-size: 18px;
-}
-.recipeLink:hover {
-  color: #5777ea;
 }
