@@ -4,7 +4,7 @@
   margin-top: 60px;
   display: flex;
   align-items: baseline;
-  justify-content: flex-start;
+  justify-content: space-between;
   transition: all 0.5s ease;
 }
 .form {
@@ -37,7 +37,6 @@
   background-color: transparent;
 }
 .randomBtn {
-  margin-left: auto;
   background-color: rgb(183, 218, 253);
   border: none;
   color: #2d2d2d;
