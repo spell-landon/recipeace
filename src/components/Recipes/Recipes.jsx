@@ -16,7 +16,6 @@ function Recipes({
   setLastSearch,
   searchOptions,
 }) {
-
   const { search } = useParams(searchString);
 
   function randomSearch() {
@@ -49,6 +48,7 @@ function Recipes({
       })
       .catch((err) => {
         console.error(err);
+        <p>No items were found</p>
       })
       .finally(() => {
         return;

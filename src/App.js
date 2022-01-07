@@ -32,6 +32,9 @@ function App() {
     setShow(!show);
     return setShow(!show);
   }, []);
+  useEffect(() => {
+
+  },[])
 
   function getRecipes() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchString}&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}`;
@@ -54,9 +57,11 @@ function App() {
     getRecipes(searchString);
     // For URL navigation
     navigate(`/recipes/${searchString}`);
+    setLastSearch('');
   }
   function handleChange(e) {
     setSearchString(e.target.value);
+    setLastSearch(e.target.value)
   }
 
   return (
@@ -74,11 +79,12 @@ function App() {
               handleChange={handleChange}
               searchString={searchString}
               show={show}
+              lastSearch={lastSearch}
             />
           }
         />
         <Route
-          path='/recipes'
+          path='/recipes/'
           element={
             <Recipes
               data={data}

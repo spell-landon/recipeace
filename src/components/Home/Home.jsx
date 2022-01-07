@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import styles from './Home.module.css';
 import fruit from '../../assets/fruit-bg.jpg';
 
-function Home({ handleSubmit, handleChange, searchString, show }) {
+function Home({ handleSubmit, handleChange, searchString, show, lastSearch }) {
   // Mount animation
   const [render, setRender] = useState(false);
   useEffect(() => {
@@ -28,7 +28,14 @@ function Home({ handleSubmit, handleChange, searchString, show }) {
           <span>Stressed?</span>
           <span>We have what you need.</span>
           <h2>
-            Find your Reci<span>peace</span>.
+            Find your Reci
+            <span
+              style={{
+                animation: `${show ? `moveShadowIn` : `moveShadowOut`} 1.5s`,
+              }}>
+              peace
+            </span>
+            .
           </h2>
           <form
             onSubmit={handleSubmit}
@@ -39,7 +46,7 @@ function Home({ handleSubmit, handleChange, searchString, show }) {
               id='searchBar'
               className={styles.searchBar}
               onChange={handleChange}
-              value={searchString}
+              value={lastSearch}
               placeholder='ex: chicken, tofu, juice, smoothie'
               autoComplete='off'
             />
