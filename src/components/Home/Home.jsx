@@ -7,9 +7,6 @@ function Home({
   handleSubmit,
   handleChange,
   searchString,
-  setSearchString,
-  show,
-  lastSearch,
 }) {
   return (
     <div className={styles.home_container}>

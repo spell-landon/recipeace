@@ -3,7 +3,6 @@ import React from 'react';
 // styles
 import styles from './About.module.css';
 
-
 function About(props) {
   return (
     <div className={styles.about_container}>
@@ -16,7 +15,10 @@ function About(props) {
         </p>
         <br></br>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, sint!
+          The 'Show More' button on any of the recipe results pages, will
+          display more information about each recipe. The 'View Full Recipe'
+          will take you the the original recipe link which contains all other
+          information, along with cooking instructions.
         </p>
       </div>
     </div>
