@@ -126,7 +126,7 @@ function App() {
             }
           />
           <Route path='/about' element={<About />} />
-          {/* <Route path='/*' element={<NoResult />} /> */}
+          <Route path='/*' element={<NoResult />} />
         </Routes>
       </main>
     </>
