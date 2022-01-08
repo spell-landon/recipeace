@@ -98,11 +98,11 @@ function Recipes({
             : `Recipes`}
         </h1>
 
-          <p className={styles.description}>
-            Check out some random categorized recipes to find something new!
-            <br></br>Or, try searching something specific in the bar above.
-          </p>
-  
+        <p className={styles.description}>
+          Check out some random categorized recipes to find something new!
+          <br></br>Or, try searching something specific in the bar above.
+        </p>
+
         <ul>
           {data.hits.map((recipe, index) => (
             <li key={index}>
