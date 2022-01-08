@@ -61,6 +61,7 @@ function App() {
       <main>
         <Routes>
           <Route
+            index
             path='/'
             element={
               <Home
