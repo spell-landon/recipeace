@@ -10,6 +10,11 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
+  // For URL navigation
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate('/');
+  }, []);
   const searchOptions = {
     apiKey: process.env.REACT_APP_EDAMAM_KEY,
     apiId: process.env.REACT_APP_EDAMAM_ID,
@@ -22,9 +27,6 @@ function App() {
   const [data, setData] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
-
-  // For URL navigation
-  const navigate = useNavigate();
 
   function getRecipes() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchString}&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}`;
