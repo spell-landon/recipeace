@@ -30,15 +30,20 @@ function Home({ handleSubmit, handleChange, searchString }) {
     'rice',
   ];
   let counter = 0;
-  let placeholder = document.getElementById('searchBar');
   function changePlaceholder() {
+    let placeholder = document.querySelector('#searchBar');
     if (counter >= options.length) {
       counter = 0;
     }
     placeholder.setAttribute('placeholder', options[counter]);
     counter++;
   }
-  setInterval(changePlaceholder, 2000);
+  useEffect(() => {
+    setInterval(changePlaceholder, 2000);
+    return () => {
+      clearInterval(changePlaceholder);
+    };
+  }, []);
 
   return (
     <div className={styles.home_container}>
@@ -65,7 +70,7 @@ function Home({ handleSubmit, handleChange, searchString }) {
           />
 
           <button type='submit' className={styles.submitBtn}>
-            <i class='fas fa-search'></i>
+            <i className='fas fa-search'></i>
           </button>
         </form>
       </div>
