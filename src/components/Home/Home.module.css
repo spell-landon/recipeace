@@ -1,22 +1,37 @@
 .home_container {
   height: calc(100vh - 60px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Poppins', sans-serif;
-  animation: fadeIn 1.5s ease;
+  -webkit-animation: fadeIn 1.5s ease;
+          animation: fadeIn 1.5s ease;
 }
 .textContainer {
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-right: 15vw;
   letter-spacing: 4px;
   font-size: 24px;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .textContainer form {
-  animation: fadeUp 1.5s ease;
+  -webkit-animation: fadeUp 1.5s ease;
+          animation: fadeUp 1.5s ease;
 }
 .textContainer h2 {
   font-size: 24px;
@@ -26,7 +41,8 @@
 .textContainer h2 span {
   color: #5777ea;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  animation: moveShadowIn 1.5s ease;
+  -webkit-animation: moveShadowIn 1.5s ease;
+          animation: moveShadowIn 1.5s ease;
 }
 /* Search Bar */
 .searchBar {
@@ -36,17 +52,43 @@
   height: 40px;
   text-align: center;
   border-radius: 30px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .searchBar:focus {
-  box-shadow: 0 4px 4px 0 rgba(121, 121, 121, 0.2);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(121, 121, 121, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(121, 121, 121, 0.2);
   outline: none;
+}
+.searchBar::-webkit-input-placeholder {
+  font-size: 14px;
+  color: rgb(190, 190, 190);
+  -webkit-animation: pulsePlaceholder 2s infinite ease-in-out;
+          animation: pulsePlaceholder 2s infinite ease-in-out;
+}
+.searchBar::-moz-placeholder {
+  font-size: 14px;
+  color: rgb(190, 190, 190);
+  animation: pulsePlaceholder 2s infinite ease-in-out;
+}
+.searchBar:-ms-input-placeholder {
+  font-size: 14px;
+  color: rgb(190, 190, 190);
+  animation: pulsePlaceholder 2s infinite ease-in-out;
+}
+.searchBar::-ms-input-placeholder {
+  font-size: 14px;
+  color: rgb(190, 190, 190);
+  animation: pulsePlaceholder 2s infinite ease-in-out;
 }
 .searchBar::placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
-  animation: pulsePlaceholder 2s infinite ease-in-out;
+  -webkit-animation: pulsePlaceholder 2s infinite ease-in-out;
+          animation: pulsePlaceholder 2s infinite ease-in-out;
 }
 .submitBtn {
   border: none;
@@ -60,26 +102,43 @@
 }
 @media (max-width: 1100px) {
   .home_container {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .textContainer {
     margin-top: 60px;
     margin-right: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     width: 90%;
     max-width: 600px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
     padding: 2rem;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   }
   .textContainer form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .searchBar {
     width: 70%;
@@ -88,6 +147,18 @@
     border-bottom: 1px solid #5777ea;
     background-color: transparent;
     padding: 0 1rem;
+    text-align: left;
+  }
+  .searchBar::-webkit-input-placeholder {
+    text-align: left;
+  }
+  .searchBar::-moz-placeholder {
+    text-align: left;
+  }
+  .searchBar:-ms-input-placeholder {
+    text-align: left;
+  }
+  .searchBar::-ms-input-placeholder {
     text-align: left;
   }
   .searchBar::placeholder {
@@ -102,8 +173,11 @@
     border-radius: 35px;
     height: 35px;
     width: 35px;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     cursor: pointer;
+    -webkit-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
   }
   .submitBtn:hover {
@@ -111,6 +185,14 @@
   }
   .submitBtn:active {
     background-color: #5777ea;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes fadeIn {
@@ -121,12 +203,32 @@
     opacity: 1;
   }
 }
-@keyframes fadeUp {
+@-webkit-keyframes fadeUp {
   0% {
-    transform: translateY(1.5rem);
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
   }
   100% {
-    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    -webkit-transform: translateY(1.5rem);
+            transform: translateY(1.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@-webkit-keyframes moveShadowIn {
+  0% {
+    text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   }
 }
 @keyframes moveShadowIn {
@@ -135,6 +237,17 @@
   }
   100% {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+@-webkit-keyframes pulsePlaceholder {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes pulsePlaceholder {
