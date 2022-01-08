@@ -12,7 +12,7 @@ import { useState, useEffect } from 'react';
 function App() {
   // For URL navigation
   const navigate = useNavigate();
-  
+
   const searchOptions = {
     apiKey: process.env.REACT_APP_EDAMAM_KEY,
     apiId: process.env.REACT_APP_EDAMAM_ID,
@@ -126,7 +126,7 @@ function App() {
             }
           />
           <Route path='/about' element={<About />} />
-          <Route path='/*' element={<NoResult />} />
+          {/* <Route path='/*' element={<NoResult />} /> */}
         </Routes>
       </main>
     </>
