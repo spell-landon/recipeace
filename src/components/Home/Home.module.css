@@ -4,14 +4,14 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -ms-flex-pack: right;
+  justify-content: right;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-family: 'Poppins', sans-serif;
   -webkit-animation: fadeIn 1.5s ease;
-          animation: fadeIn 1.5s ease;
+  animation: fadeIn 1.5s ease;
 }
 .textContainer {
   z-index: 1;
@@ -20,8 +20,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-right: 15vw;
   letter-spacing: 4px;
   font-size: 24px;
@@ -31,7 +31,7 @@
 }
 .textContainer form {
   -webkit-animation: fadeUp 1.5s ease;
-          animation: fadeUp 1.5s ease;
+  animation: fadeUp 1.5s ease;
 }
 .textContainer h2 {
   font-size: 24px;
@@ -42,7 +42,7 @@
   color: #5777ea;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   -webkit-animation: moveShadowIn 1.5s ease;
-          animation: moveShadowIn 1.5s ease;
+  animation: moveShadowIn 1.5s ease;
 }
 /* Search Bar */
 .searchBar {
@@ -53,21 +53,21 @@
   text-align: center;
   border-radius: 30px;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .searchBar:focus {
   -webkit-box-shadow: 0 4px 4px 0 rgba(121, 121, 121, 0.2);
-          box-shadow: 0 4px 4px 0 rgba(121, 121, 121, 0.2);
+  box-shadow: 0 4px 4px 0 rgba(121, 121, 121, 0.2);
   outline: none;
 }
 .searchBar::-webkit-input-placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
   -webkit-animation: pulsePlaceholder 2s infinite ease-in-out;
-          animation: pulsePlaceholder 2s infinite ease-in-out;
+  animation: pulsePlaceholder 2s infinite ease-in-out;
 }
 .searchBar::-moz-placeholder {
   font-size: 14px;
@@ -88,7 +88,7 @@
   font-size: 14px;
   color: rgb(190, 190, 190);
   -webkit-animation: pulsePlaceholder 2s infinite ease-in-out;
-          animation: pulsePlaceholder 2s infinite ease-in-out;
+  animation: pulsePlaceholder 2s infinite ease-in-out;
 }
 .submitBtn {
   border: none;
@@ -103,8 +103,8 @@
 @media (max-width: 1100px) {
   .home_container {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .textContainer {
     margin-top: 60px;
@@ -115,18 +115,18 @@
     width: 90%;
     max-width: 600px;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8);
     -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     padding: 2rem;
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   }
   .textContainer form {
     display: -webkit-box;
@@ -134,11 +134,11 @@
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
   }
   .searchBar {
     width: 70%;
@@ -174,7 +174,7 @@
     height: 35px;
     width: 35px;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     cursor: pointer;
     -webkit-transition: background-color 0.2s ease;
     -o-transition: background-color 0.2s ease;
@@ -185,6 +185,11 @@
   }
   .submitBtn:active {
     background-color: #5777ea;
+  }
+}
+@media (max-width: 800px) {
+  .home_container {
+    height: calc(100vh - 40px);
   }
 }
 @-webkit-keyframes fadeIn {
@@ -206,21 +211,21 @@
 @-webkit-keyframes fadeUp {
   0% {
     -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
+    transform: translateY(1.5rem);
   }
   100% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 @keyframes fadeUp {
   0% {
     -webkit-transform: translateY(1.5rem);
-            transform: translateY(1.5rem);
+    transform: translateY(1.5rem);
   }
   100% {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 }
 @-webkit-keyframes moveShadowIn {
