@@ -46,7 +46,7 @@
 .searchBar::placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
-  animation: pulsePlaceholder 2.5s infinite ease-in-out;
+  animation: pulsePlaceholder 2s infinite ease-in-out;
 }
 
 .submitBtn {
@@ -143,7 +143,10 @@
   0% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
