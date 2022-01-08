@@ -13,6 +13,7 @@
 
 # misc
 /TODO.txt
+/planning.txt
 .DS_Store
 .env.local
 .env.development.local
