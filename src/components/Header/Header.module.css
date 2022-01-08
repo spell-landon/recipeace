@@ -1,22 +1,36 @@
 .header {
   background-color: rgba(200, 211, 201, 0.97);
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: 'Poppins', sans-serif;
   position: fixed;
   width: 100vw;
   z-index: 10;
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 .header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 1rem;
   width: 100%;
   margin: 0 auto;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header a {
   text-decoration: none;
@@ -33,9 +47,15 @@
   color: #5777ea;
 }
 .header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   list-style-type: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   color: #4a4a4a;
   font-size: 14px;
@@ -45,6 +65,8 @@
   padding: 0.5rem 1rem;
   margin: 0 0.3rem;
   border-radius: 10px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .header ul li:hover {
