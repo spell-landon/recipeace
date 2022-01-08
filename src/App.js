@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import Recipes from './components/Recipes/Recipes';
 import About from './components/About/About';
 import Random from './components/Random/Random';
+import NoResult from './components/NoResult/NoResult';
 // dependencies
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -125,6 +126,7 @@ function App() {
             }
           />
           <Route path='/about' element={<About />} />
+          <Route path='*' element={<NoResult />} />
         </Routes>
       </main>
     </>
