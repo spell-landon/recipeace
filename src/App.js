@@ -12,9 +12,7 @@ import { useState, useEffect } from 'react';
 function App() {
   // For URL navigation
   const navigate = useNavigate();
-  useEffect(() => {
-    navigate('/');
-  }, []);
+  
   const searchOptions = {
     apiKey: process.env.REACT_APP_EDAMAM_KEY,
     apiId: process.env.REACT_APP_EDAMAM_ID,
