@@ -1,8 +1,6 @@
 // dependencies
 import React from 'react';
 import { useEffect } from 'react/cjs/react.development';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { fasSearch } from '@fortawesome/free-solid-svg-icons';
 // styles
 import styles from './Home.module.css';
 
