@@ -33,7 +33,6 @@ To install this repository:
 - As a cook, I want to be able to search for recipes, so that I can find something to cook.
 - As a cook, I want to be able to see details about the recipe, so that I can learn about what I'm cooking.
 - As a cook, I want to be able to see the ingredients, so I know what goes into the recipe when cooking.
-- As a cook, I want to be able to see the steps of the recipes, so I know which order to complete the meal.
 - As a user, I want to have a picture of each recipe, so I can see the photo before deciding if I want to cook the meal.
 
 ### Wireframes
@@ -60,10 +59,12 @@ To install this repository:
 
 #### Bronze
 
-- As a user, I would like to have a random recipe, so if I don't know what to cook, I can have a random option to choose from.
+- As a user, I would like to have a random recipe button, so if I don't know what to cook, I can have a random option to choose from.
 
 #### Silver
+- As a user, I would like to have pagination so I can see more recipes relating to my search.
 
 #### Gold
-
+- As a user, I would like to have an option of seeing recipes based on the time of day.
+- As a user, I would like to have the option of seeing recipes based on the weather outside. 
 ## Major Hurdles / Unsolved Problems
