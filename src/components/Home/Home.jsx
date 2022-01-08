@@ -42,6 +42,8 @@ function Home({ handleSubmit, handleChange, searchString }) {
       clearInterval(changePlaceholder);
     };
   }, []);
+  // End changePlaceholder Text
+  
 
   return (
     <div className={styles.home_container}>
