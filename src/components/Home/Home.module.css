@@ -48,7 +48,6 @@
   color: rgb(190, 190, 190);
   animation: pulsePlaceholder 2s infinite ease-in-out;
 }
-
 .submitBtn {
   border: none;
   color: transparent;
@@ -114,7 +113,6 @@
     background-color: #5777ea;
   }
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
