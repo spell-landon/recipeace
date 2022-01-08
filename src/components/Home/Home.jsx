@@ -38,7 +38,7 @@ function Home({ handleSubmit, handleChange, searchString }) {
     placeholder.setAttribute('placeholder', options[counter]);
     counter++;
   }
-  setInterval(changePlaceholder, 2500);
+  setInterval(changePlaceholder, 2000);
 
   return (
     <div className={styles.home_container}>
