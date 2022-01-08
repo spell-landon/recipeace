@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 // styles
-import styles from './Random.module.css'
+import styles from './Random.module.css';
 // components
 import InputField from '../InputField/InputField';
 import RecipeCard from '../RecipeCard/RecipeCard';
@@ -18,7 +18,6 @@ function Recipes({
   setLastSearch,
   searchOptions,
 }) {
-
   function randomSearch() {
     let options = [
       `vegan`,
@@ -31,6 +30,15 @@ function Recipes({
       `hearty`,
       `soup`,
       `healthy`,
+      'breakfast',
+      'lunch',
+      'beverages',
+      'appetizer',
+      'poultry',
+      'pork',
+      'vegetarian',
+      'bread',
+      'holidays',
     ];
     let item = options[Math.floor(Math.random() * options.length)];
     return item;
@@ -73,9 +81,7 @@ function Recipes({
           searchString={searchString}
           getRandom={getRandom}
         />
-        <h1 className={styles.mainTitle}>
-          Random Recipes
-        </h1>
+        <h1 className={styles.mainTitle}>Random Recipes</h1>
         <p className={styles.description}>
           Check out some random categorized recipes to find something new!
           <br></br>Or, try searching something specific in the bar above.

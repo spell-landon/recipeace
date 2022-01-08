@@ -7,7 +7,6 @@
 }
 .text_container {
   z-index: 1;
-  /* backdrop-filter: blur(80px); */
   display: flex;
   flex-direction: column;
   margin: auto 0;

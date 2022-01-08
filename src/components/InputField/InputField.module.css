@@ -22,6 +22,7 @@
   margin: 1rem 0;
   text-align: center;
   box-shadow: 0 2px 4px 0 rgba(121, 121, 121, 0.25);
+  transition: all 0.2s ease;
 }
 .search:focus {
   box-shadow: inset 0 2px 4px 0 rgba(121, 121, 121, 0.25);
@@ -37,10 +38,8 @@
   background-color: transparent;
 }
 .randomBtn {
-  /* background-color: rgb(183, 218, 253); */
   background-color: transparent;
   border: none;
-  /* color: #2d2d2d; */
   color: rgba(94, 118, 225, 100%);
   padding: 0.5rem 0.5rem;
   border-radius: 5px;
@@ -49,7 +48,6 @@
   transition: background-color 0.2s ease;
 }
 .randomBtn:hover {
-  /* background-color: rgb(171, 210, 249); */
   background-color: rgba(94, 118, 225, 0.1);
 }
 .randomBtn:active {
@@ -73,8 +71,17 @@
     transition: all 0.5s ease;
   }
   .search {
-    width: 300px;
+    max-width: 60%;
     margin: 1rem 0;
+    border-radius: 0;
+    border-bottom: 1px solid #5777ea6b;
+    background-color: transparent;
+    padding: 0 1rem;
+    text-align: left;
+    box-shadow: none;
+  }
+  .search:focus {
+    box-shadow: none;
   }
   .randomBtn {
     margin-left: 0;
