@@ -38,12 +38,9 @@ function Home({ handleSubmit, handleChange, searchString }) {
   }
   useEffect(() => {
     setInterval(changePlaceholder, 2000);
-    return () => {
-      clearInterval(changePlaceholder);
-    };
+    return clearInterval(changePlaceholder);
   }, []);
   // End changePlaceholder Text
-  
 
   return (
     <div className={styles.home_container}>
