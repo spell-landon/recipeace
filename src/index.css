@@ -6,7 +6,7 @@
 }
 html {
   background-image: url(../src/assets/fruit-bg.jpg);
-  height: calc(100vh);
+  max-height: 100vh;
   background-size: cover;
   overflow: hidden;
   opacity: 1;
