@@ -1,6 +1,6 @@
 // dependencies
 import React from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react/cjs/react.development';
 // styles
 import styles from './Home.module.css';
 
@@ -11,7 +11,7 @@ function Home({ handleSubmit, handleChange, searchString }) {
     'chicken',
     'tofu',
     'juice',
-    'smoothie',
+    'smoothies',
     'lemons',
     'cookies',
     'stroganoff',
@@ -27,15 +27,26 @@ function Home({ handleSubmit, handleChange, searchString }) {
     'curry',
     'rice',
   ];
+  // let counter = 0;
   let counter = 0;
+  const [placeholderText, setPlaceholderText] = useState(options[counter]);
   function changePlaceholder() {
-    let placeholder = document.querySelector('#searchBar');
-    if (counter >= options.length) {
-      counter = 0;
-    }
-    placeholder.setAttribute('placeholder', options[counter]);
-    counter++;
+    // let placeholder = document.querySelector('#searchBar');
+    // if (counter >= options.length) {
+      //   counter = 0;
+      // }
+      // placeholder.setAttribute('placeholder', options[counter]);
+      // counter++;
+    setInterval(() => {
+      if (counter >= options.length) {
+        counter = 0;
+      }
+      counter++;
+      // counter += 1;
+      setPlaceholderText(options[counter]);
+    }, 2500);
   }
+  changePlaceholder();
   // useEffect(() => {
   //   setInterval(changePlaceholder, 2000);
   //   return clearInterval(changePlaceholder);
@@ -61,7 +72,7 @@ function Home({ handleSubmit, handleChange, searchString }) {
             className={styles.searchBar}
             onChange={handleChange}
             value={searchString}
-            placeholder={changePlaceholder}
+            placeholder={placeholderText}
             autoComplete='off'
             required
           />

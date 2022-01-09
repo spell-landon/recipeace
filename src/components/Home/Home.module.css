@@ -66,29 +66,29 @@
 .searchBar::-webkit-input-placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
-  -webkit-animation: pulsePlaceholder 2s infinite ease-in-out;
-  animation: pulsePlaceholder 2s infinite ease-in-out;
+  -webkit-animation: pulsePlaceholder 2.5s infinite ease-in-out;
+  animation: pulsePlaceholder 2.5s infinite ease-in-out;
 }
 .searchBar::-moz-placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
-  animation: pulsePlaceholder 2s infinite ease-in-out;
+  animation: pulsePlaceholder 2.5s infinite ease-in-out;
 }
 .searchBar:-ms-input-placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
-  animation: pulsePlaceholder 2s infinite ease-in-out;
+  animation: pulsePlaceholder 2.5s infinite ease-in-out;
 }
 .searchBar::-ms-input-placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
-  animation: pulsePlaceholder 2s infinite ease-in-out;
+  animation: pulsePlaceholder 2.5s infinite ease-in-out;
 }
 .searchBar::placeholder {
   font-size: 14px;
   color: rgb(190, 190, 190);
-  -webkit-animation: pulsePlaceholder 2s infinite ease-in-out;
-  animation: pulsePlaceholder 2s infinite ease-in-out;
+  -webkit-animation: pulsePlaceholder 2.5s infinite ease-in-out;
+  animation: pulsePlaceholder 2.5s infinite ease-in-out;
 }
 .submitBtn {
   border: none;
