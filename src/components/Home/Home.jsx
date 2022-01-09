@@ -5,28 +5,28 @@ import { useState, useEffect } from 'react/cjs/react.development';
 import styles from './Home.module.css';
 
 function Home({ handleSubmit, handleChange, searchString }) {
-  // Change placeholder text
+  // Change placeholder text every 2 seconds
   // https://www.titanwolf.org/Network/q/eec68783-2ff7-45e0-8dbd-d73dbd5eef6c/y
-  let options = [
-    'chicken',
-    'tofu',
-    'juice',
-    'smoothies',
-    'lemons',
-    'cookies',
-    'stroganoff',
-    'chinese',
-    'cactus',
-    'noodles',
-    'beef',
-    'ice cream',
-    'lasagna',
-    'cheese dips',
-    'sushi',
-    'steak',
-    'curry',
-    'rice',
-  ];
+  // let options = [
+  //   'chicken',
+  //   'tofu',
+  //   'juice',
+  //   'smoothies',
+  //   'lemons',
+  //   'cookies',
+  //   'stroganoff',
+  //   'chinese',
+  //   'cactus',
+  //   'noodles',
+  //   'beef',
+  //   'ice cream',
+  //   'lasagna',
+  //   'cheese dips',
+  //   'sushi',
+  //   'steak',
+  //   'curry',
+  //   'rice',
+  // ];
   // let counter = 0;
   // const [placeholderText, setPlaceholderText] = useState(options[counter]);
   // function changePlaceholder() {

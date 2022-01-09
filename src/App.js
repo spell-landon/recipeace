@@ -12,20 +12,23 @@ import { useState, useEffect } from 'react';
 function App() {
   // For URL navigation
   const navigate = useNavigate();
-
+  // API search options
   const searchOptions = {
     apiKey: process.env.REACT_APP_EDAMAM_KEY,
     apiId: process.env.REACT_APP_EDAMAM_ID,
   };
+  // When the page loads,
+  // Set the data to an empty array, set the search string and the last search to empty
   useEffect(() => {
     setData([]);
     setSearchString('');
     setLastSearch('');
   }, []);
+  // states
   const [data, setData] = useState([]);
   const [searchString, setSearchString] = useState('');
   const [lastSearch, setLastSearch] = useState('');
-
+  // API call to get the recipes
   function getRecipes() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${searchString}&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}`;
     fetch(url)
@@ -42,14 +45,18 @@ function App() {
         return;
       });
   }
+  // When a user submits a search query
+  // get recipes with the search string
+  // navigate to the URL
+  // reset the last search to empty
   function handleSubmit(e) {
     e.preventDefault();
     getRecipes(searchString);
     // For URL navigation
     navigate(`/recipes/${searchString}`);
     setLastSearch('');
-    console.log(data);
   }
+  // When a user interacts with an input text field
   function handleChange(e) {
     setSearchString(e.target.value);
     setLastSearch(e.target.value);
