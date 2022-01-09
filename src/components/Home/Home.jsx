@@ -36,9 +36,10 @@ function Home({ handleSubmit, handleChange, searchString }) {
     placeholder.setAttribute('placeholder', options[counter]);
     counter++;
   }
-  useEffect(() => {
-    setInterval(changePlaceholder, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setInterval(changePlaceholder, 2000);
+  //   return clearInterval(changePlaceholder);
+  // }, []);
   // End changePlaceholder Text
 
   return (
@@ -60,7 +61,7 @@ function Home({ handleSubmit, handleChange, searchString }) {
             className={styles.searchBar}
             onChange={handleChange}
             value={searchString}
-            placeholder='beef'
+            placeholder={changePlaceholder}
             autoComplete='off'
             required
           />
