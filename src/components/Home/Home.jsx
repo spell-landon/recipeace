@@ -33,20 +33,21 @@ function Home({ handleSubmit, handleChange, searchString }) {
   function changePlaceholder() {
     // let placeholder = document.querySelector('#searchBar');
     // if (counter >= options.length) {
-      //   counter = 0;
-      // }
-      // placeholder.setAttribute('placeholder', options[counter]);
-      // counter++;
+    //   counter = 0;
+    // }
+    // placeholder.setAttribute('placeholder', options[counter]);
+    // counter++;
+    if (counter >= options.length) {
+      counter = 0;
+    }
     setInterval(() => {
-      if (counter >= options.length) {
-        counter = 0;
-      }
       counter++;
       // counter += 1;
       setPlaceholderText(options[counter]);
     }, 2500);
   }
   changePlaceholder();
+
   // useEffect(() => {
   //   setInterval(changePlaceholder, 2000);
   //   return clearInterval(changePlaceholder);
