@@ -1,6 +1,6 @@
 // dependencies
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 // styles
@@ -20,8 +20,9 @@ function Recipes({
   setLastSearch,
   searchOptions,
 }) {
+  // Get the search parameters from searchString
   const { search } = useParams(searchString);
-
+  // Return a random option for the random api fetch
   function randomSearch() {
     let options = [
       `vegan`,
@@ -38,7 +39,7 @@ function Recipes({
     let item = options[Math.floor(Math.random() * options.length)];
     return item;
   }
-
+  // API call based on search String
   function getRecipeSearch() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${search}&app_id=${searchOptions.apiId}&app_key=${searchOptions.apiKey}&random=true`;
     fetch(url)
@@ -55,6 +56,7 @@ function Recipes({
         return;
       });
   }
+  // API call based on random search option
   function getRandom() {
     let url = `https://api.edamam.com/api/recipes/v2?type=public&q=${randomSearch()}&app_id=${
       searchOptions.apiId
@@ -73,12 +75,13 @@ function Recipes({
         return;
       });
   }
-
+  // When component loads, get the recipeSearch data
   useEffect(() => {
     getRecipeSearch();
     return setData([]);
   }, []);
 
+  // If there is no data to display, show a no results page.
   if (data.length === 0 || data.hits.length === 0) {
     return (
       <div className={styles.loading}>
@@ -104,18 +107,15 @@ function Recipes({
           searchString={searchString}
           getRandom={getRandom}
         />
-
         <h1 className={styles.mainTitle}>
           {search
             ? search.charAt(0).toUpperCase() + search.slice(1) + ' Recipes'
             : `Recipes`}
         </h1>
-
         {/* <p className={styles.description}>
           Check out some random categorized recipes to find something new!
           <br></br>Or, try searching something specific in the bar above.
         </p> */}
-
         <ul>
           {data.hits.map((recipe, index) => (
             <li key={index}>

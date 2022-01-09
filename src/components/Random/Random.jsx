@@ -1,6 +1,6 @@
 // dependencies
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 // styles
 import styles from './Random.module.css';
 // components

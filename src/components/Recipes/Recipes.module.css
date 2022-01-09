@@ -1,3 +1,4 @@
+/*? START LOADING */
 .loading {
   height: calc(100vh - 60px);
   width: 100%;
@@ -46,6 +47,8 @@
   background-color: rgb(127, 148, 214);
   border: 1px solid rgb(127, 148, 214);
 }
+/* END LOADING */
+/*? RECIPES CONTAINER */
 .recipes_container {
   font-family: 'Poppins', sans-serif;
   -webkit-transition: background-color 0.5s ease;
@@ -70,7 +73,6 @@
   width: 100%;
   max-width: 1200px;
 }
-
 .recipes_page .mainTitle {
   font-family: 'Rosarivo', serif;
   font-size: 30px;
@@ -94,10 +96,6 @@
 .mainTitle > h1 {
   margin: auto;
 }
-/* .mainTitle > button {
-  justify-self: flex-end;
-  align-self: center;
-} */
 .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,7 +137,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
-
+/* MEDIA QUERIES */
 @media (max-width: 1100px) {
   .recipes_container {
     background-color: rgba(226, 226, 226, 0.9);
@@ -194,6 +192,7 @@
     height: calc(100vh - 40px);
   }
 }
+/* KEYFRAMES */
 @keyframes pulseText {
   0% {
     color: white;
