@@ -14,8 +14,35 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-animation: pulse 2s ease-in-out infinite;
-  animation: pulse 2s ease-in-out infinite;
+}
+.loading > div {
+  background-color: rgb(182, 77, 77);
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.loading > div > .homeLink {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: 1px solid white;
+  max-width: fit-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.loading > div > .homeLink:hover {
+  background-color: rgb(107, 132, 216);
+  border: 1px solid rgb(107, 132, 216);
+}
+.loading > div > .homeLink:focus {
+  background-color: rgb(127, 148, 214);
+  border: 1px solid rgb(127, 148, 214);
 }
 .recipes_container {
   font-family: 'Poppins', sans-serif;
@@ -62,6 +89,13 @@
   font-family: 'Rosarivo', serif;
   font-weight: 100;
 }
+.mainTitle > h1 {
+  margin: auto;
+}
+/* .mainTitle > button {
+  justify-self: flex-end;
+  align-self: center;
+} */
 .description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,37 +192,29 @@
     height: calc(100vh - 40px);
   }
 }
-@-webkit-keyframes pulse {
+@keyframes pulseText {
   0% {
-    color: black;
+    color: white;
     -webkit-transform: scale(1);
     transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(61, 61, 61, 0.5);
   }
   50% {
     color: rgb(107, 132, 216);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: -4px 8px 10px rgba(61, 61, 61, 0.5);
   }
-  0% {
-    color: black;
+  90% {
+    color: white;
     -webkit-transform: scale(1);
     transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(61, 61, 61, 0.5);
   }
-}
-@keyframes pulse {
-  0% {
-    color: black;
+  100% {
+    color: white;
     -webkit-transform: scale(1);
     transform: scale(1);
-  }
-  50% {
-    color: rgb(107, 132, 216);
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-  }
-  0% {
-    color: black;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(61, 61, 61, 0.5);
   }
 }

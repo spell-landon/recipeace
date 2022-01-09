@@ -30,14 +30,14 @@ function Home({ handleSubmit, handleChange, searchString }) {
   // let counter = 0;
   // const [placeholderText, setPlaceholderText] = useState(options[counter]);
   // function changePlaceholder() {
-    // Old
-    // let placeholder = document.querySelector('#searchBar');
-    // if (counter >= options.length) {
-    //   counter = 0;
-    // }
-    // placeholder.setAttribute('placeholder', options[counter]);
-    // counter++;
-    // new
+  // Old
+  // let placeholder = document.querySelector('#searchBar');
+  // if (counter >= options.length) {
+  //   counter = 0;
+  // }
+  // placeholder.setAttribute('placeholder', options[counter]);
+  // counter++;
+  // new
   //   if (counter >= options.length) {
   //     counter = 0;
   //   }
