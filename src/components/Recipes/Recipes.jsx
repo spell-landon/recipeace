@@ -80,7 +80,19 @@ function Recipes({
   }, []);
 
   if (data.length === 0 || data.hits.length === 0) {
-    return <p className={styles.loading}>Loading...</p>;
+    return (
+      <div className={styles.loading}>
+        <div>
+          <p>
+            No result found!<br></br>Go back to the homepage to try again!
+            <br></br>
+          </p>
+          <Link to='/' className={styles.homeLink}>
+            Home
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -92,16 +104,17 @@ function Recipes({
           searchString={searchString}
           getRandom={getRandom}
         />
+
         <h1 className={styles.mainTitle}>
           {search
             ? search.charAt(0).toUpperCase() + search.slice(1) + ' Recipes'
             : `Recipes`}
         </h1>
 
-        <p className={styles.description}>
+        {/* <p className={styles.description}>
           Check out some random categorized recipes to find something new!
           <br></br>Or, try searching something specific in the bar above.
-        </p>
+        </p> */}
 
         <ul>
           {data.hits.map((recipe, index) => (
