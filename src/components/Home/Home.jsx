@@ -28,25 +28,25 @@ function Home({ handleSubmit, handleChange, searchString }) {
     'rice',
   ];
   // let counter = 0;
-  let counter = 0;
-  const [placeholderText, setPlaceholderText] = useState(options[counter]);
-  function changePlaceholder() {
+  // const [placeholderText, setPlaceholderText] = useState(options[counter]);
+  // function changePlaceholder() {
+    // Old
     // let placeholder = document.querySelector('#searchBar');
     // if (counter >= options.length) {
     //   counter = 0;
     // }
     // placeholder.setAttribute('placeholder', options[counter]);
     // counter++;
-    if (counter >= options.length) {
-      counter = 0;
-    }
-    setInterval(() => {
-      counter++;
-      // counter += 1;
-      setPlaceholderText(options[counter]);
-    }, 2500);
-  }
-  changePlaceholder();
+    // new
+  //   if (counter >= options.length) {
+  //     counter = 0;
+  //   }
+  //   setInterval(() => {
+  //     counter += 1;
+  //     setPlaceholderText(options[counter]);
+  //   }, 2500);
+  // }
+  // changePlaceholder();
 
   // useEffect(() => {
   //   setInterval(changePlaceholder, 2000);
@@ -73,7 +73,7 @@ function Home({ handleSubmit, handleChange, searchString }) {
             className={styles.searchBar}
             onChange={handleChange}
             value={searchString}
-            placeholder={placeholderText}
+            placeholder='Search Recipes...'
             autoComplete='off'
             required
           />
