@@ -1,9 +1,18 @@
 // dependencies
 import React from 'react';
+import { useState, useEffect } from 'react';
 // styles
 import styles from './About.module.css';
 
 function About(props) {
+  const [title, setTitle] = useState('Recipeace');
+  useEffect(() => {
+    setTitle('Recipeace - About');
+    document.title = title;
+    return (() => {
+      document.title = 'Recipeace'
+    })
+  }, [title]);
   return (
     <div className={styles.about_container}>
       <div className={styles.text_container}>
