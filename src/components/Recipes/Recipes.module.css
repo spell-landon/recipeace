@@ -125,6 +125,10 @@
   backdrop-filter: grayscale(0.5) blur(10px);
 }
 .recipes_container ul {
+  --index: 0;
+  animation: fade 1s ease-in forwards;
+
+
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
