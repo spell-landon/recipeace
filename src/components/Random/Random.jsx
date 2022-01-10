@@ -1,6 +1,6 @@
 // dependencies
 import React from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // styles
 import styles from './Random.module.css';
 // components
@@ -18,6 +18,16 @@ function Recipes({
   setLastSearch,
   searchOptions,
 }) {
+  // Document title
+  const [title, setTitle] = useState('Recipeace');
+  useEffect(() => {
+    setTitle('Recipeace - Random Recipe');
+    document.title = title;
+    return () => {
+      document.title = 'Recipeace';
+    };
+  }, [title]);
+
   function randomSearch() {
     let options = [
       `vegan`,

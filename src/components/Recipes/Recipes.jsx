@@ -1,6 +1,6 @@
 // dependencies
 import React from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 // styles
@@ -20,6 +20,15 @@ function Recipes({
   setLastSearch,
   searchOptions,
 }) {
+  // Document title
+  const [title, setTitle] = useState('Recipeace');
+  useEffect(() => {
+    setTitle(`Recipeace - Recipes`);
+    document.title = title;
+    return () => {
+      document.title = 'Recipeace';
+    };
+  }, [title]);
   // Get the search parameters from searchString
   const { search } = useParams(searchString);
   // Return a random option for the random api fetch

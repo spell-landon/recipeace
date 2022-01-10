@@ -7,6 +7,8 @@ import styles from './RecipeCard.module.css';
 import AdditionalInfo from '../AdditionalInfo/AdditionalInfo';
 
 function RecipeCard({ recipe }) {
+
+
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
