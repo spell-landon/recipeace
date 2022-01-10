@@ -23,6 +23,16 @@ function Header(props) {
           <Link to='/random'>
             <li>Surprise Me</li>
           </Link>
+          {/* <select>
+            <option default value='-'>
+              Search By...
+            </option>
+            <option value='Surprise Me'>
+              <Link to='/random'>Surprise Me</Link>
+            </option>
+            <option value='Time of Day'>Time of Day</option>
+            <option value='Weather'>Weather</option>
+          </select> */}
           <Link to='/about'>
             <li>About</li>
           </Link>
