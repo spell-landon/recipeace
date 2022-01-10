@@ -62,9 +62,15 @@ To install this repository:
 - As a user, I would like to have a random recipe button, so if I don't know what to cook, I can have a random option to choose from.
 
 #### Silver
+
 - As a user, I would like to have pagination so I can see more recipes relating to my search.
 
 #### Gold
+
 - As a user, I would like to have an option of seeing recipes based on the time of day.
-- As a user, I would like to have the option of seeing recipes based on the weather outside. 
+- As a user, I would like to have the option of seeing recipes based on the weather outside.
+
 ## Major Hurdles / Unsolved Problems
+
+- One major hurdle was upon delpoying the site. I had initiated a useEffect for the main input field on the Home page to cycle through a list of food related items. When deployed, Netlify did not agree with the useEffect and none of the components showed up, just a blank .html document with the background image. I ended up removing the useEffect all together in order to make the site functional again.
+- Unsolved Problems: Silver and Gold stretch goals. In order to apply those ideas correctly, I would have to redesign the navigation bar to be able to add more options while viewing on mobile. I attempted to incorporate the react-burger-menu library but it would not function the way I wanted it to. So, for now, the stretch goals have been placed on hold for the time being.
