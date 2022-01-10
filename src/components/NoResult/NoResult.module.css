@@ -53,6 +53,28 @@
 .text_container p a:hover {
   text-decoration: underline;
 }
+/* Home Button */
+.text_container a{
+  max-width: fit-content;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: rgb(124, 72, 72);
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  box-shadow: 0 0 0 rgb(0, 0, 0);
+  transition: all 0.2s ease;
+}
+.text_container a:hover {
+  background-color: rgb(143, 74, 74);
+}
+.text_container a:active {
+  background-color: rgb(143, 74, 74);
+  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 1200px) {
   .about_container {
     -webkit-box-pack: center;
