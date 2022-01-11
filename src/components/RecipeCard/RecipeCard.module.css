@@ -26,7 +26,7 @@
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  animation: fade 1s ease-in forwards;
+  /* animation: fade 1s ease-in forwards; */
 }
 .cardContainerActive {
   margin: 1rem 0 0 0;
